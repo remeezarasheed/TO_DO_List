@@ -12,13 +12,11 @@ function showList() {
                 if (response[i].completed == true) {
                     data += `<li class="list-group-item list-group-item-secondary">
                        <input id ="checkBox${i + 1}" class="form-check-input me-1" type="checkbox" value="" checked disabled>
-                       <i class='bx bx-checkbox-minus'></i>
                        <label>${response[i].title}</label>
                      </li>`;
                 } else {
                     data += `<li class="list-group-item list-group-item-light">
                     <input id ="checkBox${i + 1}" class="form-check-input me-1" type="checkbox" value="" onchange="checkTodo(${i + 1})">
-                    <i class='bx bx-checkbox-minus'></i>
                     <label>${response[i].title}</label>
                   </li>`;
                 }
